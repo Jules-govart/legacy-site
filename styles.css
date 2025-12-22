@@ -10,17 +10,21 @@ body {
   min-height: 100vh;
   color: #f4f4f4;
 
-  background:
-    radial-gradient(
-      circle at top,
-      rgba(110, 20, 35, 0.55) 0%,
-      rgba(60, 10, 20, 0.85) 35%,
-      rgba(10, 5, 7, 0.95) 75%,
-      #000000 100%
-    );
-
-  background-attachment: fixed;
+background:
+  linear-gradient(
+    to bottom,
+    #6e1423 0%,
+    #4a0f1b 35%,
+    #1a080d 70%,
+    #000000 100%
+  ),
+  radial-gradient(
+    circle at top,
+    rgba(255,255,255,0.04),
+    transparent 60%
+  );
 }
+
 
 /* ===== Layout ===== */
 .container {
