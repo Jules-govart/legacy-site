@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>LEGACY – Liste BDE MBS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+
+    <!-- Logo -->
+    <a class="brand" href="index.html">
+      <img src="logo-legacy.png" alt="Logo LEGACY" class="brand-logo">
+      <span class="brand-name">LEGACY – Liste BDE MBS</span>
+    </a>
+
+    <!-- Titre centré mobile -->
+    <div class="brand-title-mobile">LEGACY</div>
+
+    <!-- Burger -->
+    <button class="nav-toggle" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav-main">
+      <ul>
+        <li><a class="active" href="index.html">Accueil</a></li>
+        <li><a href="evenements.html">Missions</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+        <li><a href="fiches.html">Fiches de révisions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <div class="hero-text">
+      <p class="kicker">Liste BDE • Montpellier Business School</p>
+
+      <h1>LEGACY — Construire aujourd’hui ce qui marquera demain</h1>
+
+      <p class="lead">
+        Une liste engagée et fédératrice, au service de la vie étudiante de MBS,
+        à travers des projets utiles, inclusifs et durables.
+      </p>
+
+      <div class="hero-actions">
+        <a href="evenements.html" class="btn btn-primary">Découvrir nos missions</a>
+        <a href="partenaires.html" class="btn btn-ghost">Voir nos partenaires</a>
+      </div>
+
+      <div class="hero-badges">
+        <span class="badge">Héritage</span>
+        <span class="badge">Exigence</span>
+        <span class="badge">Collectif</span>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <h2>LEGACY en bref</h2>
+      <ul>
+        <li>Une liste structurée et accessible</li>
+        <li>Des événements pensés pour tous</li>
+        <li>Des partenariats utiles</li>
+        <li>Un campus plus uni</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- VALEURS -->
+  <section class="container">
+    <h2 class="section-title">Nos valeurs</h2>
+    <p class="section-subtitle">
+      Des principes clairs qui guident chacune de nos actions et donnent du sens à notre mandat.
+    </p>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <h3>Inclusion</h3>
+        <p class="tagline">Créer un environnement</p>
+        <p>
+          Nous valorisons la diversité comme une richesse qui renforce la cohésion et la créativité de notre communauté étudiante.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Rigueur</h3>
+        <p class="tagline">Rigueur & qualité</p>
+        <p>
+          Organisation, sécurité, com’ : un cadre sérieux pour des événements mieux maîtrisés.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Loyauté</h3>
+        <p class="tagline">Un campus uni</p>
+        <p>
+          Être loyal, c’est aussi faire preuve de solidarité au sein de l’équipe et défendre les intérêts communs avant les intérêts personnels.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- OBJECTIFS -->
+  <section class="container">
+    <h2 class="section-title">Nos objectifs</h2>
+    <p class="section-subtitle">
+      Structurer et dynamiser durablement la vie étudiante de Montpellier Business School.
+    </p>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <h3>Représenter l’école</h3>
+        <p class="tagline">Image & rayonnement</p>
+        <p>
+          Porter une image ambitieuse, bienveillante et professionnelle auprès des partenaires et de l’administration.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Dynamiser le campus</h3>
+        <p class="tagline">Événements fédérateurs</p>
+        <p>
+          Proposer des formats variés et inclusifs pour rassembler tous les profils d’étudiants.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Unir les associations</h3>
+        <p class="tagline">Synergies inter-assos</p>
+        <p>
+          Travailler main dans la main avec les associations pour créer plus de cohésion et de visibilité.
+        </p>
+      </article>
+    </div>
+  </section>
+
+<!-- CALL TO ACTION -->
+<section class="cta-section">
+  <div class="cta-card container">
+    <h2>Rejoindre l’aventure LEGACY</h2>
+
+    <p>
+      Une question, une idée ou l’envie de vous impliquer ?
+      LEGACY est une liste ouverte, à l’écoute des étudiants,
+      engagée pour faire évoluer durablement la vie de campus à MBS.
+    </p>
+
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+      <a href="evenements.html" class="btn btn-ghost">Découvrir nos missions</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    LEGACY – Liste BDE MBS 
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav-main');
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+      navToggle.classList.toggle('nav-open');
+    });
+  }
+</script>
+
+</body>
+</html>
+
+

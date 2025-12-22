@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>LEGACY – Liste BDE MBS · Nos missions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+
+    <a class="brand" href="index.html">
+      <img src="logo-legacy.png" alt="Logo LEGACY" class="brand-logo">
+      <span class="brand-name">LEGACY – Liste BDE MBS</span>
+    </a>
+
+    <div class="brand-title-mobile">LEGACY</div>
+
+    <button class="nav-toggle" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-main">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a class="active" href="evenements.html">Nos missions</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+        <li><a href="fiches.html">Fiches de révisions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <section class="container">
+    <h1 class="section-title">Nos missions</h1>
+    <p class="section-subtitle">
+      Les actions et projets portés par LEGACY ont pour objectif de structurer,
+      dynamiser et valoriser la vie étudiante de Montpellier Business School.
+    </p>
+  </section>
+
+  <!-- MISSIONS -->
+  <section class="container">
+    <div class="grid grid-3">
+
+      <article class="card">
+        <h3>Événements fédérateurs</h3>
+        <p class="tagline">Créer du lien</p>
+        <p>
+          Proposer des événements accessibles et inclusifs,
+          pensés pour rassembler les étudiants français et internationaux
+          autour de moments forts et conviviaux.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Projets à impact</h3>
+        <p class="tagline">Donner du sens</p>
+        <p>
+          Mettre en place des actions porteuses de valeurs,
+          favorisant la solidarité, la sensibilisation et
+          l’engagement étudiant au sein du campus.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Vie associative</h3>
+        <p class="tagline">Travailler ensemble</p>
+        <p>
+          Renforcer les liens entre les associations,
+          encourager les collaborations et valoriser
+          la richesse de la vie associative de MBS.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXEMPLES -->
+  <section class="container">
+    <h2 class="section-title">Exemples de formats envisagés</h2>
+    <p class="section-subtitle">
+      Une programmation progressive, adaptée aux attentes des étudiants
+      et aux contraintes de l’école.
+    </p>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <h3>Événements campus</h3>
+        <p class="tagline">Rassembler</p>
+        <p>
+          Journées thématiques, animations inter-promotions,
+          projets collaboratifs avec les associations et le BDS.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Temps forts extérieurs</h3>
+        <p class="tagline">S’ouvrir</p>
+        <p>
+          Sorties, événements sportifs ou culturels,
+          formats innovants favorisant la cohésion
+          et la découverte.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Moments plus posés</h3>
+        <p class="tagline">Équilibrer</p>
+        <p>
+          Afterworks, rencontres étudiantes,
+          moments d’échange favorisant les liens
+          dans un cadre plus calme.
+        </p>
+      </article>
+    </div>
+  </section>
+
+<!-- SOIRÉES -->
+<section class="container">
+  <h2 class="section-title">Soirées</h2>
+  <p class="section-subtitle">
+    La programmation des soirées LEGACY sera annoncée progressivement
+    au fil de l’année.
+  </p>
+
+  <div class="avenir-wrapper">
+    <div class="avenir-text">À venir</div>
+  </div>
+</section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-card container">
+      <h2>Une idée ? Une envie de proposer un projet ?</h2>
+      <p>
+        LEGACY souhaite rester à l’écoute des étudiants
+        et encourager les initiatives qui font avancer
+        la vie de campus.
+      </p>
+
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+        <a href="index.html" class="btn btn-ghost">Retour à l’accueil</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    LEGACY – Liste BDE MBS · Nos missions
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav-main');
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+      navToggle.classList.toggle('nav-open');
+    });
+  }
+</script>
+
+</body>
+</html>
