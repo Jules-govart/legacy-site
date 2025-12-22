@@ -55,19 +55,22 @@ header {
 
 .brand {
   display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  text-decoration: none;
+  align-items: center; /* ALIGNEMENT VERTICAL */
+  gap: 0.6rem;
+  height: 100%;
 }
 
 .brand-logo {
-  height: 100px;                  /* logo plus grand */
+  height: 46px;          /* taille optimale mobile */
   width: auto;
-  object-fit: contain;
   display: block;
+  object-fit: contain;
 }
 
 .brand-name {
+  display: flex;
+  align-items: center;
+  line-height: 1;
   font-weight: 700;
   letter-spacing: 0.12em;
   color: #f5f1e8;
@@ -76,10 +79,15 @@ header {
 }
 
 .brand-title-mobile {
-  display: none;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-weight: 800;
   letter-spacing: 0.2em;
   color: #f5f1e8;
+  pointer-events: none;
 }
 
 /* Nav desktop */
@@ -438,3 +446,18 @@ footer {
   margin: 0 auto 0.8rem;
   display: block;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(255,255,255,0.03), transparent 45%);
+
+  opacity: 0.35;
+}
+
