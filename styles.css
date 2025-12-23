@@ -55,15 +55,15 @@ header {
 
 .brand {
   display: flex;
-  align-items: center; /* ALIGNEMENT VERTICAL */
+  align-items: center; /* 🔑 alignement vertical parfait */
   gap: 0.6rem;
   height: 100%;
 }
 
 .brand-logo {
+  display: block; /* évite les décalages inline */
   height: 90px;          /* taille optimale mobile */
   width: auto;
-  display: block;
   object-fit: contain;
 }
 
@@ -706,6 +706,18 @@ body::before {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+}
+.brand {
+  text-decoration: none; /* supprime tout soulignement */
+  color: inherit;        /* empêche la couleur lien */
+}
+
+.brand:visited,
+.brand:hover,
+.brand:active,
+.brand:focus {
+  text-decoration: none;
+  color: inherit;
 }
 
 
