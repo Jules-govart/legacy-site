@@ -98,5 +98,26 @@
   © LEGACY – Liste BDE MBS · Nous contacter
 </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav-main");
+
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("nav-open");
+    nav.classList.toggle("nav-open");
+  });
+
+  nav.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      toggle.classList.remove("nav-open");
+      nav.classList.remove("nav-open");
+    });
+  });
+});
+</script>
+
 </body>
 </html>
