@@ -488,3 +488,33 @@ body::before {
   opacity: 0.35;
 }
 
+/* ===== Header scroll animation ===== */
+header {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  background: rgba(0, 0, 0, 0.98);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Logo animation */
+.brand-logo {
+  transition: height 0.3s ease;
+}
+
+header.scrolled .brand-logo {
+  height: 28px;
+}
+
+/* Titre mobile animation */
+.brand-title-mobile {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header.scrolled .brand-title-mobile {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+
