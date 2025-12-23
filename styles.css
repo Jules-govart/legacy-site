@@ -118,7 +118,7 @@ header {
 
 /* ===== Burger ===== */
 .nav-toggle {
-  display: none;
+  display: flex;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -127,6 +127,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .nav-toggle span {
