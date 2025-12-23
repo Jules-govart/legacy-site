@@ -61,7 +61,7 @@ header {
 }
 
 .brand-logo {
-  height: 46px;          /* taille optimale mobile */
+  height: 80px;          /* taille optimale mobile */
   width: auto;
   display: block;
   object-fit: contain;
@@ -345,7 +345,7 @@ footer {
   }
 
   .brand-logo {
-    height: 34px;           /* PLUS VISIBLE */
+    height: 60px;           /* PLUS VISIBLE */
     width: auto;
   }
 
