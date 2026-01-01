@@ -549,4 +549,37 @@ footer {
   outline: none;
 }
 
+/* ===== FICHES – Ajustements MOBILE (moins agressif + centré) ===== */
+@media (max-width: 640px) {
+
+  /* Titre + sous-titre */
+  .fiches-page .section-title {
+    font-size: 1.55rem;
+    line-height: 1.15;
+    text-align: left; /* ou center si tu veux tout centrer */
+  }
+
+  .fiches-page .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    max-width: 32rem;
+  }
+
+  /* Cadre "Aucune fiche / Rien à signaler" (ton block actuel) */
+  .fiches-page .avenir-wrapper {
+    height: auto;                 /* au lieu d'une hauteur fixe */
+    padding: 1.2rem 1rem;         /* plus d'air */
+    text-align: center;
+  }
+
+  .fiches-page .avenir-text {
+    font-size: 1.25rem;           /* beaucoup moins agressif */
+    line-height: 1.25;
+    letter-spacing: 0.14em;       /* réduit */
+    text-align: center;
+    max-width: 22ch;              /* force une belle largeur */
+    margin: 0 auto;
+  }
+}
+
 
