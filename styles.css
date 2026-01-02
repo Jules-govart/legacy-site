@@ -584,8 +584,26 @@ footer {
 /* Cartes fiches : bouton plus propre */
 .fiches-page .card .hero-actions {
   margin-top: 0.9rem;
+  
 }
+/* ===== FIX MOBILE : "Aucune fiche / Rien à signaler" centré et moins agressif ===== */
+@media (max-width: 640px) {
 
+  /* Le cadre */
+  .fiches-page .avenir-wrapper {
+    height: auto;
+    padding: 1.2rem 1rem;
+    text-align: center;
+  }
 
-
-
+  /* Le texte */
+  .fiches-page .avenir-text {
+    font-size: 1.15rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.12em !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 26ch;
+    white-space: normal;
+  }
+}
