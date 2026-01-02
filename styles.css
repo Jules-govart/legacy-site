@@ -700,7 +700,7 @@ footer {
 
   .banner-legacy::before {
     background-size: 240px;
-    opacity: 0.20; /* un poil + visible sur mobile */
+    opacity: 0.24; /* un poil + visible sur mobile */
   }
 
   .banner-legacy-text h2 {
@@ -711,3 +711,4 @@ footer {
     font-size: 0.9rem;
   }
 }
+
