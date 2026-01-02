@@ -581,5 +581,11 @@ footer {
     margin: 0 auto;
   }
 }
+/* Cartes fiches : bouton plus propre */
+.fiches-page .card .hero-actions {
+  margin-top: 0.9rem;
+}
+
+
 
 
