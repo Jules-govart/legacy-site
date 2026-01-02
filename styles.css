@@ -608,36 +608,27 @@ footer {
   }
 }
 
-/* ===== BANNIÈRE SIGNATURE LEGACY (page accueil) ===== */
+/* ===== BANNIÈRE SIGNATURE LEGACY (FULL WIDTH / RECTANGLE) ===== */
 .banner-legacy {
   position: relative;
   overflow: hidden;
-  padding: 2.8rem 0;
+
+  /* ✅ full width */
+  width: 100%;
   margin: 2.2rem 0;
-  border-radius: 1.4rem;
+
+  /* ✅ rectangle (plus d’arrondis) */
+  border-radius: 0;
+
+  /* ✅ hauteur & padding */
+  padding: 2.8rem 0;
+
+  /* (optionnel) petit trait premium en haut/bas */
+  border-top: 1px solid rgba(230, 192, 106, 0.18);
+  border-bottom: 1px solid rgba(230, 192, 106, 0.18);
 }
 
-.banner-legacy::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("logo-legacy.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 340px;
-  opacity: 0.12;
-  filter: drop-shadow(0 0 25px rgba(0,0,0,0.8));
-  transform: scale(1);
-  animation: legacyPulse 16s ease-in-out infinite alternate;
-}
-
-.banner-legacy::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(110, 20, 35, 0.65), rgba(0, 0, 0, 0.95));
-}
-
+/* On garde le contenu centré et lisible */
 .banner-legacy-inner {
   position: relative;
   min-height: 190px;
@@ -646,6 +637,44 @@ footer {
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
+}
+
+/* ✅ Logo en fond : PLUS visible + parfaitement centré */
+.banner-legacy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("logo-legacy.png");
+  background-repeat: no-repeat;
+
+  /* ✅ centre exact */
+  background-position: center center;
+
+  /* ✅ taille logo */
+  background-size: 320px;
+
+  /* ✅ plus visible */
+  opacity: 0.18;
+
+  /* ✅ pas “vers le haut” */
+  transform: none;
+
+  filter: drop-shadow(0 0 22px rgba(0,0,0,0.75));
+}
+
+/* ✅ overlay sombre pour la lisibilité */
+.banner-legacy::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(110, 20, 35, 0.55), rgba(0, 0, 0, 0.92));
+}
+
+/* Texte au-dessus */
+.banner-legacy-text {
+  position: relative;
+  z-index: 1;
 }
 
 .banner-legacy-text h2 {
@@ -662,34 +691,23 @@ footer {
   line-height: 1.45;
 }
 
-@keyframes legacyPulse {
-  0% {
-    transform: scale(0.95) translateY(0);
-    opacity: 0.10;
-    filter: blur(0.3px);
-  }
-  100% {
-    transform: scale(1.12) translateY(-6px);
-    opacity: 0.14;
-    filter: blur(1.6px);
-  }
-}
-
 /* Mobile */
 @media (max-width: 640px) {
   .banner-legacy {
     padding: 2.2rem 0;
     margin: 1.6rem 0;
   }
+
   .banner-legacy::before {
     background-size: 240px;
+    opacity: 0.20; /* un poil + visible sur mobile */
   }
+
   .banner-legacy-text h2 {
     font-size: 1.25rem;
   }
+
   .banner-legacy-text p {
     font-size: 0.9rem;
   }
 }
-
-
