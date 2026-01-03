@@ -639,7 +639,7 @@ footer {
 /* Logo au centre (UNE SEULE FOIS) */
 .banner-logo {
   position: absolute;
-  top: 20%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -725,6 +725,7 @@ footer {
     width: 280px;        /* un poil moins gros sur PC */
   }
 }
+
 
 
 
