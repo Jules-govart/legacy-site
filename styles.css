@@ -613,68 +613,63 @@ footer {
   position: relative;
   overflow: hidden;
 
-  /* ✅ full width */
   width: 100%;
   margin: 2.2rem 0;
-
-  /* ✅ rectangle (plus d’arrondis) */
   border-radius: 0;
 
-  /* ✅ hauteur & padding */
-  padding: 2.8rem 0;
+  /* hauteur maîtrisée */
+  padding: 2.4rem 0;
 
-  /* (optionnel) petit trait premium en haut/bas */
   border-top: 1px solid rgba(230, 192, 106, 0.18);
   border-bottom: 1px solid rgba(230, 192, 106, 0.18);
 }
 
-/* On garde le contenu centré et lisible */
+/* Contenu centré */
 .banner-legacy-inner {
   position: relative;
-  min-height: 190px;
+  min-height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
+  z-index: 2; /* au-dessus du logo */
 }
 
-/* ✅ Logo en fond : PLUS visible + parfaitement centré */
-.banner-legacy::before {
-  content: "";
+/* Logo au centre (UNE SEULE FOIS) */
+.banner-logo {
   position: absolute;
-  inset: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  background-image: url("logo-legacy.png");
-  background-repeat: no-repeat;
+  width: 320px;
+  height: auto;
 
-  /* ✅ centre exact */
-  background-position: center center;
-
-  /* ✅ taille logo */
-  background-size: 320px;
-
-  /* ✅ plus visible */
   opacity: 0.18;
-
-  /* ✅ pas “vers le haut” */
-  transform: none;
+  pointer-events: none;
+  z-index: 1;
 
   filter: drop-shadow(0 0 22px rgba(0,0,0,0.75));
 }
 
-/* ✅ overlay sombre pour la lisibilité */
+/* Overlay sombre pour lisibilité */
 .banner-legacy::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(110, 20, 35, 0.55), rgba(0, 0, 0, 0.92));
+  background: radial-gradient(
+    circle at center,
+    rgba(110, 20, 35, 0.55),
+    rgba(0, 0, 0, 0.92)
+  );
+  z-index: 1; /* au-dessus du logo mais sous le texte */
 }
 
-/* Texte au-dessus */
+/* Texte */
 .banner-legacy-text {
   position: relative;
-  z-index: 1;
+  z-index: 3; /* au-dessus de tout */
 }
 
 .banner-legacy-text h2 {
@@ -691,16 +686,20 @@ footer {
   line-height: 1.45;
 }
 
-/* Mobile */
+/* ===== Mobile ===== */
 @media (max-width: 640px) {
   .banner-legacy {
-    padding: 2.2rem 0;
+    padding: 2rem 0;
     margin: 1.6rem 0;
   }
 
-  .banner-legacy::before {
-    background-size: 240px;
-    opacity: 0.24; /* un poil + visible sur mobile */
+  .banner-legacy-inner {
+    min-height: 150px;
+  }
+
+  .banner-logo {
+    width: 240px;
+    opacity: 0.22;
   }
 
   .banner-legacy-text h2 {
@@ -710,33 +709,4 @@ footer {
   .banner-legacy-text p {
     font-size: 0.9rem;
   }
-/* Logo centré dans la bannière */
-.banner-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  width: 280px;      /* ajuste si besoin */
-  height: auto;
-
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
 }
-/* Le texte reste au-dessus */
-.banner-legacy-inner,
-.banner-legacy-text {
-  position: relative;
-  z-index: 1;
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-  .banner-logo {
-    width: 220px;
-    opacity: 0.22;
-  }
-}
-
-
