@@ -704,10 +704,7 @@ footer {
 
   .banner-legacy-text h2 {
     font-size: 1.25rem;
-  }
-  
-  .banner-legacy-text h2 {
-  opacity: 0.85;
+    opacity: 0.80;
   }
 
   .banner-legacy-text p {
@@ -725,10 +722,15 @@ footer {
     min-height: 170px;   /* au lieu de 170px */
   }
 
+  .banner-legacy-text h2 {
+  opacity: 0.85;
+}
+  
   .banner-logo {
     width: 280px;        /* un poil moins gros sur PC */
   }
 }
+
 
 
 
