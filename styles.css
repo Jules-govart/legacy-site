@@ -705,6 +705,10 @@ footer {
   .banner-legacy-text h2 {
     font-size: 1.25rem;
   }
+  
+  .banner-legacy-text h2 {
+  opacity: 0.85;
+  }
 
   .banner-legacy-text p {
     font-size: 0.9rem;
@@ -725,6 +729,7 @@ footer {
     width: 280px;        /* un poil moins gros sur PC */
   }
 }
+
 
 
 
