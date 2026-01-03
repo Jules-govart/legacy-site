@@ -738,8 +738,8 @@ footer {
 
   /* ===== 1) TYPO MOBILE PLUS CALME ===== */
   .hero-text h1 {
-    font-size: 2.05rem;
-    line-height: 1.12;
+    font-size: 1.7rem;
+    line-height: 1.2;
     letter-spacing: -0.01em;
   }
 
@@ -791,8 +791,3 @@ footer {
 footer {
   padding-bottom: calc(1.6rem + env(safe-area-inset-bottom));
 }
-
-
-
-
-
