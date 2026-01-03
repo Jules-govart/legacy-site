@@ -639,7 +639,7 @@ footer {
 /* Logo au centre (UNE SEULE FOIS) */
 .banner-logo {
   position: absolute;
-  top: 44%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -713,7 +713,7 @@ footer {
 /* ===== Desktop (réduit la hauteur de bannière) ===== */
 @media (min-width: 900px) {
   .banner-legacy {
-    padding: 1.6rem 0;   /* au lieu de 2.4rem */
+    padding: 2rem 0;   /* au lieu de 2.4rem */
     margin: 1.8rem 0;
   }
 
@@ -725,5 +725,6 @@ footer {
     width: 280px;        /* un poil moins gros sur PC */
   }
 }
+
 
 
