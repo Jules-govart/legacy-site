@@ -710,5 +710,33 @@ footer {
   .banner-legacy-text p {
     font-size: 0.9rem;
   }
+/* Logo centré dans la bannière */
+.banner-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 280px;      /* ajuste si besoin */
+  height: auto;
+
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
 }
+/* Le texte reste au-dessus */
+.banner-legacy-inner,
+.banner-legacy-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .banner-logo {
+    width: 220px;
+    opacity: 0.22;
+  }
+}
+
 
