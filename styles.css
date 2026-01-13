@@ -791,3 +791,25 @@ footer {
 footer {
   padding-bottom: calc(1.6rem + env(safe-area-inset-bottom));
 }
+
+/* ===== SOIRÉE – AFFICHAGE IMAGE ===== */
+.soiree-wrapper {
+  margin-top: 1.6rem;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  border: 1px solid rgba(230, 192, 106, 0.35);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+}
+
+.soiree-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile optimisation */
+@media (max-width: 640px) {
+  .soiree-wrapper {
+    margin-top: 1.2rem;
+  }
+}
