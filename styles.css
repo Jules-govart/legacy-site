@@ -792,15 +792,6 @@ footer {
   padding-bottom: calc(1.6rem + env(safe-area-inset-bottom));
 }
 
-/* ===== SOIRÉE – AFFICHAGE IMAGE ===== */
-.soiree-wrapper {
-  margin-top: 1.6rem;
-  border-radius: 1.4rem;
-  overflow: hidden;
-  border: 1px solid rgba(230, 192, 106, 0.35);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
-}
-
 .soiree-image {
   width: 100%;
   height: auto;
@@ -813,3 +804,19 @@ footer {
     margin-top: 1.2rem;
   }
 }
+/* ===== IMAGE SOIRÉE ===== */
+
+.event-image {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.event-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  display: block;
+  margin: 0 auto;
+}
+
