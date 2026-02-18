@@ -864,3 +864,24 @@ footer {
   margin-top: 3rem;
   padding: 0 clamp(1rem, 4vw, 2rem);
 }
+
+.archives {
+  margin-top: 3rem;
+}
+
+.archives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.archives-grid img {
+  width: 100%;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.archives-grid img:hover {
+  transform: scale(1.04);
+}
+
