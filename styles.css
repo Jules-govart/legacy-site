@@ -1143,11 +1143,10 @@ footer {
 
 /* ===== FIX MENU BURGER MOBILE (override safe) ===== */
 @media (max-width: 640px) {
-  .nav-main.nav-open {
-    display: block !important;
-  }
+ .nav-main-mobile {
+  display: none;
+}
 
-  .nav-main {
-    z-index: 999 !important;
-  }
+.nav-main-mobile.nav-open {
+  display: block;
 }
