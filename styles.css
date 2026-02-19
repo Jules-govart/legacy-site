@@ -1143,12 +1143,9 @@ footer {
 
 /* ===== FIX MENU BURGER MOBILE (override safe) ===== */
 @media (max-width: 640px) {
- .nav-main-mobile {
-  display: none;
-}
+ .nav-main-mobile { display: none; }
 
-.nav-main-mobile.nav-open {
-  display: block;
+.nav-main-mobile.nav-open { display: block; }
 }
 /* ===== FIX logo desktop : descendre légèrement (sans changer la taille) ===== */
 @media (min-width: 900px){
@@ -1231,3 +1228,4 @@ footer {
 
   box-shadow: 0 18px 45px rgba(0,0,0,0.55) !important;
 }
+
