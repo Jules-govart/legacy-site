@@ -1341,3 +1341,29 @@ footer {
 
 }
 
+/* ===== FIX : supprimer l'espace entre HERO et BANNIÈRE (desktop only) ===== */
+@media (min-width: 901px){
+  .hero{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: auto !important;
+  }
+
+  .banner-legacy{
+    margin-top: 0 !important;  /* c'est ça qui crée le gros "trou" */
+  }
+}
+
+/* ===== FIX : logo hero à droite plus haut (desktop only) ===== */
+@media (min-width: 901px){
+  .hero-visual{
+    align-self: start;          /* au lieu d'être centré verticalement */
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;          /* ajuste 0/10/20 selon ton goût */
+  }
+
+  .hero-logo-big{
+    transform: translateY(-20px);  /* remonte le logo (ajuste -10 à -40) */
+  }
+}
