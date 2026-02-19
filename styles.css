@@ -1178,10 +1178,10 @@ footer {
   padding: 1.05rem 1.6rem;
 
   border-radius: 999px;
-  border: 2px solid rgba(255,255,255,0.9);
+  border: 2px solid rgba(230,192,106,0.85);
   background: rgba(0,0,0,0.55);
 
-  color: #fff;
+  color: #e6c06a;
   text-decoration: none !important; /* supprime le soulignement */
   font-weight: 700;
   font-size: 1.15rem;
@@ -1202,31 +1202,6 @@ footer {
   }
 }
 
-/* ===== FIX CTA DESKTOP ===== */
-.edhec-cta,
-.edhec-cta:visited,
-.edhec-cta:hover,
-.edhec-cta:active,
-.edhec-cta:focus {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
 
-  width: min(780px, 92%) !important;
-  margin: 2.2rem auto 0 !important;
-  padding: 1.1rem 1.6rem !important;
-
-  border-radius: 999px !important;
-  border: 2px solid rgba(255,255,255,0.9) !important;
-  background: rgba(0,0,0,0.55) !important;
-
-  color: #ffffff !important;
-  text-decoration: none !important;
-
-  font-weight: 700 !important;
-  font-size: 1.15rem !important;
-
-  box-shadow: 0 18px 45px rgba(0,0,0,0.55) !important;
-}
 
 
