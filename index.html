@@ -79,40 +79,35 @@
 
 <main>
 
-  <!-- HERO -->
-  <!-- HERO (nouvelle version EDHEC-like) -->
-<section class="container hero hero-home">
+  <section class="hero container">
 
+  <!-- COLONNE GAUCHE -->
   <div class="hero-text">
-    <div class="welcome">
-      <div class="welcome-title">BIENVENUE</div>
-      <div class="welcome-subtitle">BUREAU DES ÉLÈVES</div>
-    </div>
+    <h1 class="welcome-title">BIENVENUE</h1>
+    <p class="welcome-subtitle">BUREAU DES ÉLÈVES</p>
 
     <div class="hero-actions">
-      <a href="evenements.html" class="btn btn-primary">Nos évènements</a>
-      <a href="partenaires.html" class="btn btn-ghost">Voir nos partenaires</a>
+      <a class="btn btn-primary" href="evenements.html">Nos événements</a>
+      <a class="btn btn-ghost" href="partenaires.html">Voir nos partenaires</a>
     </div>
 
+    <!-- LA CARTE RESTE ICI (colonne gauche) -->
+    <div class="hero-card">
+      <h2>LEGACY en bref</h2>
+      <ul>
+        <li>Un BDE structuré et accessible</li>
+        <li>Des événements pensés pour tous</li>
+        <li>Des partenariats utiles</li>
+        <li>Un campus plus uni</li>
+      </ul>
+    </div>
+  </div>
 
-  <!-- Logo à droite (desktop uniquement via CSS) -->
-  <aside class="hero-logo" aria-hidden="true">
-    <img src="logo-legacy.png" alt="" />
-  </aside>
+  <!-- COLONNE DROITE (DESKTOP) -->
+  <div class="hero-visual">
+    <img src="logo-legacy.png" alt="Logo LEGACY" class="hero-logo-big">
+  </div>
 
-</section>
-
-<!-- Ta carte "LEGACY en bref" descend en dessous (comme un bloc à part) -->
-<section class="container">
-  <aside class="hero-card hero-brief">
-    <h2>LEGACY en bref</h2>
-    <ul>
-      <li>Un BDE structurée et accessible</li>
-      <li>Des événements pensés pour tous</li>
-      <li>Des partenariats utiles</li>
-      <li>Un campus plus uni</li>
-    </ul>
-  </aside>
 </section>
 
   <!-- 🟥 BANNIÈRE SIGNATURE LEGACY -->
@@ -256,6 +251,7 @@
 
 </body>
 </html>
+
 
 
 
