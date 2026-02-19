@@ -1368,3 +1368,14 @@ footer {
   }
 }
 
+/* ===== FIX : supprimer l'espace entre HERO et BANNIÈRE (desktop only) ===== */
+@media (min-width: 900px){
+  .hero{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: auto !important;
+  }
+  .banner-legacy{
+    margin-top: 0 !important;
+  }
+}
