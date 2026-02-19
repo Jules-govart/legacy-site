@@ -1145,9 +1145,9 @@ footer {
 @media (max-width: 640px) {
   .nav-main.nav-open {
     display: block !important;
+  }
+
   .nav-main {
     z-index: 999 !important;
   }
 }
-  
-
