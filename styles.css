@@ -955,38 +955,6 @@ footer {
     width: 280px;
   }
 }
-/* ===== NAV: icônes réseaux (desktop + mobile) ===== */
-.nav-social{
-  display: flex;
-  gap: .65rem;
-  align-items: center;
-  margin-left: .8rem;
-}
-
-.nav-social-link{
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(230,192,106,0.22);
-  background: rgba(0,0,0,0.25);
-}
-
-.nav-social-link svg{
-  width: 18px;
-  height: 18px;
-  fill: rgba(230,192,106,0.92);
-}
-
-.nav-social-link:active{ transform: scale(.98); }
-
-/* Mobile: réduire légèrement */
-@media (max-width: 640px){
-  .nav-social{ gap: .55rem; }
-  .nav-social-link{ width: 34px; height: 34px; border-radius: 9px; }
-  .nav-social-link svg{ width: 17px; height: 17px; }
-}
 /* =========================
    HEADER / FOOTER EDHEC-LIKE
    Desktop only (mobile unchanged)
@@ -1141,6 +1109,7 @@ footer {
 @media (max-width: 899px) {
   .nav-social { display: none; }
 }
+
 
 
 
