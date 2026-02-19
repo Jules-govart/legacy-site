@@ -1141,14 +1141,10 @@ footer {
   header .brand-title-mobile { display: none !important; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* ===== FIX MENU BURGER MOBILE (override safe) ===== */
+@media (max-width: 640px) {
+  .nav-main.nav-open {
+    display: block !important;
+    z-index: 999 !important;
+  }
+}
