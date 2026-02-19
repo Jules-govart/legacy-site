@@ -1330,4 +1330,14 @@ footer {
 
 }
 
+/* ===== FIX espace sous HERO (desktop uniquement) ===== */
+@media (min-width: 901px){
+
+  .hero{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    min-height: auto;
+  }
+
+}
 
