@@ -1152,5 +1152,6 @@ footer {
 }
 
 @media (min-width: 900px){
-  header .brand-logo{ margin-top: 6px; }
+  header .brand-logo{ margin-top: 10px; }
 }
+
