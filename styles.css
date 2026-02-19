@@ -1317,3 +1317,15 @@ footer {
 @media (max-width: 900px){
   .hero-visual{ display:none; }
 }
+
+@media (min-width: 901px){
+
+  .hero-visual{
+    align-items: flex-start;
+  }
+
+  .hero-logo-big{
+    margin-top: -40px;   /* ajuste -20 / -30 / -50 selon ton goût */
+  }
+
+}
