@@ -714,7 +714,7 @@ footer {
 /* ===== Desktop (réduit la hauteur de bannière) ===== */
 @media (min-width: 900px) {
   .banner-legacy {
-    padding: 2,4rem 0;   /* au lieu de 2.4rem */
+    padding: 2.4rem 0;   /* au lieu de 2.4rem */
     margin: 1.8rem 0;
   }
 
@@ -1228,4 +1228,5 @@ footer {
 
   box-shadow: 0 18px 45px rgba(0,0,0,0.55) !important;
 }
+
 
