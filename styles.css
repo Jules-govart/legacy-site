@@ -1271,48 +1271,49 @@ footer {
   }
 }
 
-/* ===== HERO DESKTOP : centrage colonne gauche + logo à droite ===== */
-@media (min-width: 901px) {
+@media (min-width: 901px){
 
-  /* Colonne gauche : on centre BIENVENUE / BDE / boutons */
-  .hero-text{
+  /* On centre uniquement le bloc titre+CTA, pas toute la colonne */
+  .hero-text{ text-align: left; }
+
+  .welcome-title,
+  .welcome-subtitle{
     text-align: center;
+    width: 100%;
   }
 
   .hero-actions{
-    justify-content: center;   /* tes boutons se centrent */
+    justify-content: center;
   }
 
-  /* La carte "LEGACY en bref" reste dans la colonne gauche et ne prend pas toute la largeur */
+  /* La carte : à gauche + remonte visuellement */
   .hero-card{
     max-width: 560px;
-    margin: 1.2rem auto 0;     /* centrée dans la colonne gauche */
+    margin: 0;              /* IMPORTANT : supprime le centrage */
+    margin-top: 0.8rem;     /* remonte (ajuste 0.4 / 0.6 / 1rem) */
   }
 
-  /* Colonne droite : logo aligné en haut, bien visible */
+  /* Colonne droite : logo plus haut + plus à droite */
   .hero-visual{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;  /* le pousse à droite */
     align-items: flex-start;
+    padding-top: 0;             /* ajuste si besoin */
   }
 
   .hero-logo-big{
     width: min(420px, 100%);
     height: auto;
-    margin-top: 10px;          /* ajuste: 0 / 6 / 12px */
+    margin-top: -10px;          /* le remonte (ajuste -5 / -15 / 0) */
     filter: drop-shadow(0 10px 30px rgba(0,0,0,0.55));
   }
 
-  /* Optionnel : donne un peu plus d’air entre colonnes */
+  /* Optionnel : pour que la grille démarre bien en haut */
   .hero{
     align-items: start;
   }
 }
 
-/* ===== MOBILE/TABLET : le logo à droite n'existe pas ===== */
 @media (max-width: 900px){
   .hero-visual{ display:none; }
 }
-
-
-
