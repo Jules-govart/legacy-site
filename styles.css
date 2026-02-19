@@ -1123,8 +1123,8 @@ footer {
   }
 
   header .brand-logo {
-    width: 60px;                   /* augmente la taille */
-    height: 60px;
+    width: 100px;                   /* augmente la taille */
+    height: 100px;
     object-fit: contain;
     display: block;
     flex: 0 0 auto;
@@ -1140,6 +1140,7 @@ footer {
   /* On cache le titre mobile sur desktop (si tu l’as encore) */
   header .brand-title-mobile { display: none !important; }
 }
+
 
 
 
