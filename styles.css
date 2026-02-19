@@ -1049,9 +1049,6 @@ footer {
   .nav-toggle { display: none; }
   .brand-title-mobile { display: none; }
 
-  /* On masque le menu mobile (dropdown) */
-  .nav-main-mobile { display: none; }
-
   /* On affiche le bloc desktop à droite */
   .nav-desktop-right {
     display: flex;
@@ -1109,6 +1106,7 @@ footer {
 @media (max-width: 899px) {
   .nav-social { display: none; }
 }
+
 
 
 
