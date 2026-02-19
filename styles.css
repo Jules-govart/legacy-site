@@ -1202,6 +1202,75 @@ footer {
   }
 }
 
+/* ===== HERO HOME : BIENVENUE (EDHEC-like) + logo à droite ===== */
+.hero-home {
+  align-items: center;
+}
+
+/* Titre BIENVENUE avec traits */
+.welcome-title{
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+  color: #e6c06a;
+}
+
+.welcome-title::before,
+.welcome-title::after{
+  content: "";
+  flex: 1 1 auto;
+  height: 2px;
+  background: rgba(230,192,106,0.65);
+  border-radius: 999px;
+}
+
+/* "BUREAU DES ÉLÈVES" old school (sans importer de police) */
+.welcome-subtitle{
+  font-family: Georgia, "Times New Roman", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  color: rgba(245,241,232,0.92);
+  margin-bottom: 1.15rem;
+}
+
+/* Colonne droite : logo */
+.hero-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo img{
+  width: min(420px, 90%);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 55px rgba(0,0,0,0.55));
+  opacity: 0.95;
+}
+
+/* Mobile : pas de logo à droite */
+@media (max-width: 640px){
+  .hero-logo{ display: none; }
+
+  /* garde BIENVENUE propre sur mobile */
+  .welcome-title{
+    justify-content: center;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  .welcome-subtitle{
+    text-align: center;
+  }
+}
+
 
 
 
