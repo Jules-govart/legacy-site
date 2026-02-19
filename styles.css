@@ -1049,6 +1049,8 @@ footer {
   .nav-toggle { display: none; }
   .brand-title-mobile { display: none; }
 
+  .nav-main-mobile { display: none; }
+
   /* On affiche le bloc desktop à droite */
   .nav-desktop-right {
     display: flex;
@@ -1138,6 +1140,7 @@ footer {
   /* On cache le titre mobile sur desktop (si tu l’as encore) */
   header .brand-title-mobile { display: none !important; }
 }
+
 
 
 
