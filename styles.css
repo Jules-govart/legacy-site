@@ -1150,6 +1150,17 @@ footer {
 .nav-main-mobile.nav-open {
   display: block;
 }
+/* ===== FIX logo desktop : descendre légèrement (sans changer la taille) ===== */
+@media (min-width: 900px){
+  header .brand {
+    align-items: center;
+  }
+
+  header .brand-logo{
+    position: relative;
+    top: 6px;           /* ajuste: 4px / 6px / 8px selon ton goût */
+  }
+}
 
 
 
