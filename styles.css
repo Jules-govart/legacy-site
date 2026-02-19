@@ -987,7 +987,160 @@ footer {
   .nav-social-link{ width: 34px; height: 34px; border-radius: 9px; }
   .nav-social-link svg{ width: 17px; height: 17px; }
 }
+/* =========================
+   HEADER / FOOTER EDHEC-LIKE
+   Desktop only (mobile unchanged)
+========================= */
 
+/* Base */
+.nav-desktop-right { display: none; }
+
+/* Footer base */
+.site-footer {
+  background: #000;
+  border-top: 1px solid rgba(230,192,106,0.15);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.2rem 1.2rem;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(230,192,106,0.22);
+  background: rgba(0,0,0,0.35);
+}
+
+.footer-social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: #e6c06a;
+  opacity: 0.9;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.6rem;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.82);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #e6c06a;
+}
+
+.footer-copy {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   DESKTOP HEADER (>= 900px)
+========================= */
+@media (min-width: 900px) {
+
+  /* Header plus haut comme EDHEC */
+  header .navbar {
+    padding: 1.2rem 1.4rem;  /* augmente la hauteur */
+    align-items: center;
+  }
+
+  /* Logo un peu plus grand */
+  .brand-logo {
+    height: 52px; /* ajuste si besoin */
+    width: auto;
+  }
+
+  /* Titre dans la marque : mieux centré */
+  .brand-name {
+    font-size: 1.15rem;
+    letter-spacing: 0.22em;
+  }
+
+  /* On garde ton burger uniquement mobile */
+  .nav-toggle { display: none; }
+  .brand-title-mobile { display: none; }
+
+  /* On masque le menu mobile (dropdown) */
+  .nav-main-mobile { display: none; }
+
+  /* On affiche le bloc desktop à droite */
+  .nav-desktop-right {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem; /* même espace entre MENU et ICONES */
+    margin-left: auto;
+  }
+
+  /* Menu desktop à gauche des icônes */
+  .nav-main-desktop ul {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+  }
+
+  .nav-main-desktop a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .nav-main-desktop a:hover {
+    color: #e6c06a;
+  }
+
+  /* Icônes à droite */
+  .nav-social-desktop {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+  }
+
+  .nav-social-desktop .nav-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(230,192,106,0.20);
+    background: rgba(0,0,0,0.28);
+  }
+
+  .nav-social-desktop svg {
+    width: 20px;
+    height: 20px;
+    fill: #e6c06a;
+    opacity: 0.9;
+  }
+}
+
+/* =========================
+   MOBILE : pas d'icônes en haut
+========================= */
+@media (max-width: 899px) {
+  .nav-social { display: none; }
+}
 
 
 
