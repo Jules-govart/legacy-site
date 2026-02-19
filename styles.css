@@ -1150,3 +1150,7 @@ footer {
 .nav-main-mobile.nav-open {
   display: block;
 }
+
+@media (min-width: 900px){
+  header .brand-logo{ margin-top: 6px; }
+}
