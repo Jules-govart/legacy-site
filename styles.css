@@ -1391,12 +1391,13 @@ footer {
   .hero-logo-big{
     position: absolute;     /* sort du flow => ne crée plus de hauteur */
     right: 0;
-    top: -60px;             /* remonte le logo (ajuste -20 / -60) */
+    top: -70px;             /* remonte le logo (ajuste -20 / -60) */
     width: min(420px, 100%);
     height: auto;
   }
 
 }
+
 
 
 
