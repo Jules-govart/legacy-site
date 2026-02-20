@@ -1202,11 +1202,6 @@ footer {
   }
 }
 
-/* ===== HERO HOME : BIENVENUE (EDHEC-like) + logo à droite ===== */
-.hero-home {
-  align-items: center;
-}
-
 /* Titre BIENVENUE avec traits */
 .welcome-title{
   font-weight: 900;
@@ -1239,21 +1234,6 @@ footer {
   opacity: 0.9;
   color: rgba(245,241,232,0.92);
   margin-bottom: 1.15rem;
-}
-
-/* Colonne droite : logo */
-.hero-logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-logo img{
-  width: min(420px, 90%);
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 18px 55px rgba(0,0,0,0.55));
-  opacity: 0.95;
 }
 
 /* Mobile : pas de logo à droite */
@@ -1318,17 +1298,6 @@ footer {
   .hero-visual{ display:none; }
 }
 
-@media (min-width: 901px){
-
-  .hero-visual{
-    align-items: flex-start;
-  }
-
-  .hero-logo-big{
-    margin-top: -60px;   /* ajuste -20 / -30 / -50 selon ton goût */
-  }
-
-}
 
 /* ===== FIX espace sous HERO (desktop uniquement) ===== */
 @media (min-width: 901px){
@@ -1354,28 +1323,4 @@ footer {
   }
 }
 
-/* ===== FIX : logo hero à droite plus haut (desktop only) ===== */
-@media (min-width: 901px){
-  .hero-visual{
-    align-self: start;          /* au lieu d'être centré verticalement */
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;          /* ajuste 0/10/20 selon ton goût */
-  }
 
-  .hero-logo-big{
-    transform: translateY(-20px);  /* remonte le logo (ajuste -10 à -40) */
-  }
-}
-
-/* ===== FIX : supprimer l'espace entre HERO et BANNIÈRE (desktop only) ===== */
-@media (min-width: 900px){
-  .hero{
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    min-height: auto !important;
-  }
-  .banner-legacy{
-    margin-top: 0 !important;
-  }
-}
