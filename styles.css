@@ -1323,4 +1323,45 @@ footer {
   }
 }
 
+/* ===== DESKTOP HERO LAYOUT CLEAN (garde mobile intact) ===== */
+@media (min-width: 901px){
+
+  /* 1) Enlève le “padding bas” ajouté par .container sur le hero */
+  .hero.container{
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* 2) Le hero ne doit pas se centrer verticalement */
+  .hero{
+    align-items: start;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* 3) La carte reste à gauche (pas centrée) */
+  .hero-card{
+    max-width: 560px;
+    margin: 0;              /* pas de centrage */
+    margin-top: 0.8rem;
+  }
+
+  /* 4) Logo colonne droite : vraiment à droite + plus haut */
+  .hero-visual{
+    display: flex;
+    justify-content: flex-end;  /* à droite */
+    align-items: flex-start;    /* en haut */
+  }
+
+  .hero-logo-big{
+    width: min(420px, 100%);
+    height: auto;
+    margin-top: -35px;          /* remonte le logo : ajuste -20 / -50 */
+  }
+
+  /* 5) Supprime le “trou” avant la bannière */
+  .banner-legacy{
+    margin-top: 0 !important;
+  }
+}
 
