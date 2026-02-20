@@ -1365,3 +1365,35 @@ footer {
   }
 }
 
+/* ===== FIX GAP HERO -> BANNIÈRE (DESKTOP) ===== */
+@media (min-width: 900px){
+
+  /* ton <section class="hero container"> */
+  .hero.container{
+    padding-bottom: 0 !important;  /* enlève le padding du container */
+    margin-bottom: 0 !important;
+  }
+
+  .banner-legacy{
+    margin-top: 0 !important;      /* enlève la marge haute de la bannière */
+  }
+
+}
+
+/* ===== Logo hero à droite : visuel remonte sans créer de vide (DESKTOP) ===== */
+@media (min-width: 900px){
+
+  .hero-visual{
+    position: relative;
+    min-height: 0;
+  }
+
+  .hero-logo-big{
+    position: absolute;     /* sort du flow => ne crée plus de hauteur */
+    right: 0;
+    top: -40px;             /* remonte le logo (ajuste -20 / -60) */
+    width: min(420px, 100%);
+    height: auto;
+  }
+
+}
