@@ -1361,7 +1361,7 @@ footer {
 
   /* 5) Supprime le “trou” avant la bannière */
   .banner-legacy{
-    margin-top: 0 !important;
+    margin-top: 0.5 !important;
   }
 }
 
@@ -1391,9 +1391,10 @@ footer {
   .hero-logo-big{
     position: absolute;     /* sort du flow => ne crée plus de hauteur */
     right: 0;
-    top: -40px;             /* remonte le logo (ajuste -20 / -60) */
+    top: -60px;             /* remonte le logo (ajuste -20 / -60) */
     width: min(420px, 100%);
     height: auto;
   }
 
 }
+
