@@ -1361,7 +1361,7 @@ footer {
 
   /* 5) Supprime le “trou” avant la bannière */
   .banner-legacy{
-    margin-top: 0.5 !important;
+    margin-top: 0.8 !important;
   }
 }
 
@@ -1375,7 +1375,7 @@ footer {
   }
 
   .banner-legacy{
-    margin-top: 0 !important;      /* enlève la marge haute de la bannière */
+    margin-top: 0.8 !important;      /* enlève la marge haute de la bannière */
   }
 
 }
@@ -1397,4 +1397,5 @@ footer {
   }
 
 }
+
 
