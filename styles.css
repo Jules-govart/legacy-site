@@ -1397,7 +1397,259 @@ footer {
   }
 
 }
+/* =========================================================
+   AJOUTS — PAGE ÉVÉNEMENTS (rentrée 2026)
+   À coller À LA FIN de styles.css, sans rien supprimer.
+   ========================================================= */
 
+/* ===== Prochain événement ===== */
+.next-event {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.next-event-flag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e6c06a;
+  border: 1px solid rgba(230, 192, 106, 0.4);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.next-event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.next-event-poster img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 18px;
+  border: 1px solid rgba(230, 192, 106, 0.22);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 0 auto;
+}
+
+.next-event-title {
+  font-size: clamp(2rem, 7vw, 3.1rem);
+  line-height: 1.05;
+  color: #f5f1e8;
+  margin-bottom: 0.7rem;
+}
+
+.next-event-sub {
+  color: #d0cbc2;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  margin-bottom: 1.6rem;
+}
+
+.next-event-meta {
+  list-style: none;
+  border-top: 1px solid rgba(230, 192, 106, 0.18);
+  margin-bottom: 1.8rem;
+}
+
+.next-event-meta li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(230, 192, 106, 0.18);
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a8a396;
+  flex-shrink: 0;
+}
+
+.meta-value {
+  color: #f5f1e8;
+  font-weight: 600;
+  text-align: right;
+}
+
+.next-event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+@media (min-width: 900px) {
+  .next-event-grid {
+    grid-template-columns: 0.85fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .next-event-poster img {
+    max-width: 100%;
+  }
+}
+
+/* ===== Line-up ===== */
+.lineup {
+  margin-bottom: 3rem;
+}
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.lineup-card {
+  background: linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(230, 192, 106, 0.2);
+  border-radius: 14px;
+  padding: 1.3rem 0.6rem;
+  text-align: center;
+}
+
+.lineup-card h3 {
+  margin: 0;
+  font-size: clamp(0.95rem, 3.5vw, 1.25rem);
+  color: #e6c06a;
+  letter-spacing: 0.02em;
+}
+
+.lineup-poster img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 18px;
+  border: 1px solid rgba(230, 192, 106, 0.22);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== Navettes ===== */
+.shuttle {
+  margin-bottom: 3rem;
+}
+
+.shuttle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.shuttle-card {
+  background: linear-gradient(180deg, #131314, #0a0a0b);
+  border: 1px solid rgba(230, 192, 106, 0.2);
+  border-radius: 16px;
+  padding: 1.4rem 1.3rem;
+}
+
+.shuttle-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #000;
+  background: linear-gradient(135deg, #c9a24f, #e6c06a);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.shuttle-time {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #f5f1e8;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+.shuttle-route {
+  color: #d3cec4;
+  line-height: 1.55;
+  margin-bottom: 0.6rem;
+}
+
+.shuttle-route strong {
+  color: #e6c06a;
+  font-weight: 600;
+}
+
+.shuttle-note {
+  font-size: 0.86rem;
+  color: #a8a396;
+}
+
+@media (min-width: 700px) {
+  .shuttle-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+  }
+}
+
+/* ===== Agenda : état "à venir" ===== */
+.agenda-item-soon {
+  opacity: 0.72;
+  border-style: dashed;
+}
+
+/* ===== Tarifs ===== */
+.pricing {
+  border: 1px solid rgba(230, 192, 106, 0.2);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.4rem 1.1rem 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(230, 192, 106, 0.12);
+}
+
+.pricing-row:last-of-type {
+  border-bottom: none;
+}
+
+.pricing-name {
+  color: #d3cec4;
+  font-size: 0.95rem;
+}
+
+.pricing-price {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #f5f1e8;
+}
+
+.pricing-row-best .pricing-name {
+  color: #e6c06a;
+  font-weight: 600;
+}
+
+.pricing-row-best .pricing-price {
+  color: #e6c06a;
+}
+
+.pricing-note {
+  font-size: 0.82rem;
+  color: #a8a396;
+  line-height: 1.5;
+  margin-top: 0.7rem;
+}
 
 
 
