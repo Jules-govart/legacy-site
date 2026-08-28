@@ -1796,3 +1796,93 @@ footer {
   .perk img { height: 54px; }
 }
 
+/* =========================================================
+   AJOUTS — PAGE MENTIONS LÉGALES
+   À coller à la fin de styles.css
+   ========================================================= */
+
+.legal {
+  max-width: 760px;
+  padding-bottom: 3rem;
+}
+
+.legal-updated {
+  color: #a8a396;
+  font-size: 0.88rem;
+  margin-bottom: 2.2rem;
+}
+
+.legal h2 {
+  font-size: 1.25rem;
+  color: #e6c06a;
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(230, 192, 106, 0.2);
+}
+
+.legal h3 {
+  font-size: 1rem;
+  color: #f5f1e8;
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal p {
+  color: #d3cec4;
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.legal strong {
+  color: #f5f1e8;
+  font-weight: 600;
+}
+
+.legal em {
+  color: #a8a396;
+  font-size: 0.9em;
+}
+
+.legal a {
+  color: #e6c06a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal a:hover {
+  color: #ffffff;
+}
+
+.legal-list {
+  list-style: none;
+  margin: 1rem 0 1.2rem;
+}
+
+.legal-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(230, 192, 106, 0.15);
+  color: #d3cec4;
+  line-height: 1.5;
+}
+
+.legal-list li span {
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #a8a396;
+}
+
+@media (min-width: 700px) {
+  .legal-list li {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1.5rem;
+  }
+  .legal-list li span {
+    flex: 0 0 150px;
+  }
+}
