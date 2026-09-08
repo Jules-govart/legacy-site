@@ -1925,3 +1925,61 @@ footer {
   line-height: 1.6;
   margin-bottom: 1.6rem;
 }
+/* =========================================================
+   AJOUTS — Affiche paysage + avertissement transport
+   À coller à la fin de styles.css
+   ========================================================= */
+
+.next-event-wide {
+  display: block;
+}
+
+.next-event-banner {
+  margin-bottom: 2rem;
+}
+
+.next-event-banner img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 16px;
+  border: 1px solid rgba(230, 192, 106, 0.22);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 0 auto;
+}
+
+.next-event-wide .next-event-info {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.event-transport {
+  background: rgba(180, 60, 40, 0.12);
+  border: 1px solid rgba(220, 110, 80, 0.4);
+  border-left: 3px solid #d4694f;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  color: #e8ddd4;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+.event-transport strong {
+  color: #e6c06a;
+  font-weight: 600;
+}
+
+/* Tarif épuisé */
+.pricing-row-out .pricing-name,
+.pricing-row-out .pricing-price {
+  color: #6e6a63;
+  text-decoration: line-through;
+  text-decoration-color: rgba(110, 106, 99, 0.6);
+}
+
+.pricing-row-out .pricing-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
