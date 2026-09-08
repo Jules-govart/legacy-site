@@ -1886,3 +1886,42 @@ footer {
     flex: 0 0 150px;
   }
 }
+/* =========================================================
+   AJOUTS — Affiche paysage + avertissement transport
+   À coller à la fin de styles.css
+   ========================================================= */
+
+.next-event-wide {
+  display: block;
+}
+
+.next-event-banner {
+  margin-bottom: 2rem;
+}
+
+.next-event-banner img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 16px;
+  border: 1px solid rgba(230, 192, 106, 0.22);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 0 auto;
+}
+
+.next-event-wide .next-event-info {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.event-warning {
+  background: rgba(180, 60, 40, 0.12);
+  border: 1px solid rgba(220, 110, 80, 0.4);
+  border-left: 3px solid #d4694f;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  color: #e8ddd4;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
