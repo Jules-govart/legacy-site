@@ -1983,3 +1983,221 @@ footer {
   font-weight: 600;
   letter-spacing: 0.04em;
 }
+/* =========================================================
+   LEGACY — ANIMATIONS
+   À coller À LA FIN de styles.css
+   ========================================================= */
+
+/* ---------- 1. Apparition au scroll ---------- */
+.anim-on .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--delai, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--delai, 0ms);
+  will-change: opacity, transform;
+}
+
+.anim-on .reveal.vu {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- 2. Header compact au scroll ---------- */
+header {
+  transition: background-color 0.35s ease, box-shadow 0.35s ease,
+              backdrop-filter 0.35s ease;
+}
+
+header.header-compact {
+  background: rgba(8, 8, 9, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.5);
+}
+
+header .navbar,
+header .brand-logo {
+  transition: padding 0.35s ease, height 0.35s ease, transform 0.35s ease;
+}
+
+header.header-compact .brand-logo {
+  transform: scale(0.88);
+}
+
+/* ---------- 3. Compte à rebours ---------- */
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.4rem 0 1.8rem;
+}
+
+.cd-unit {
+  flex: 1 1 68px;
+  min-width: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.85rem 0.4rem;
+  background: linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(230, 192, 106, 0.25);
+  border-radius: 12px;
+}
+
+.cd-num {
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+  font-weight: 700;
+  color: #e6c06a;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.cd-lab {
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a8a396;
+}
+
+.cd-live {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e6c06a;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid rgba(230, 192, 106, 0.45);
+  border-radius: 12px;
+  animation: pulse-doux 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse-doux {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+@media (min-width: 700px) {
+  .countdown { max-width: 420px; }
+}
+
+/* ---------- 4. Bandeau défilant ---------- */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.6rem;
+  padding: 0.4rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-piste {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: defile var(--duree, 40s) linear infinite;
+}
+
+.marquee:hover .marquee-piste {
+  animation-play-state: paused;
+}
+
+.marquee-piste .perk {
+  flex: 0 0 190px;
+  margin: 0;
+}
+
+@keyframes defile {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ---------- 5. Micro-interactions ---------- */
+.btn {
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 26px rgba(230, 192, 106, 0.3);
+}
+
+.rentree-card,
+.shuttle-card,
+.lineup-card,
+.archive-item {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rentree-card:hover,
+.shuttle-card:hover,
+.lineup-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(230, 192, 106, 0.5);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+.archive-item {
+  overflow: hidden;
+}
+
+.archive-item img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.archive-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Soulignement animé du menu */
+.nav-main a {
+  position: relative;
+}
+
+.nav-main-desktop a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a24f, #e6c06a);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-main-desktop a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-main-desktop a.active::after {
+  transform: scaleX(1);
+}
+
+/* Icônes réseaux */
+.nav-social-link,
+.footer-social-link {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s ease;
+}
+
+.nav-social-link:hover,
+.footer-social-link:hover {
+  transform: translateY(-2px) scale(1.06);
+}
+
+/* ---------- 6. Accessibilité ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .marquee-piste { animation: none; }
+  .cd-live { animation: none; }
+  * { scroll-behavior: auto !important; }
+}
