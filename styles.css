@@ -2213,3 +2213,25 @@ header.header-compact .brand-logo {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
+/* =========================================================
+   AJOUT — bloc annonce (événement sans affiche encore)
+   À coller à la fin de styles.css
+   ========================================================= */
+
+.annonce {
+  max-width: 640px;
+  background: linear-gradient(180deg, #141414, #0a0a0b);
+  border: 1px solid rgba(230, 192, 106, 0.22);
+  border-radius: 18px;
+  padding: 2rem 1.6rem;
+}
+
+.annonce .next-event-title {
+  margin-top: 0;
+}
+
+@media (min-width: 800px) {
+  .annonce {
+    padding: 2.6rem 2.4rem;
+  }
+}
