@@ -653,7 +653,7 @@
         e.preventDefault();
         var top = t.getBoundingClientRect().top + window.pageYOffset - 70;
         window.scrollTo({ top: top, behavior: reduced ? 'auto' : 'smooth' });
-        history.replaceState(null, '', id);
+        try { history.replaceState(null, '', id); } catch (err) { /* contexte isolé : ignoré */ }
       });
     });
   }
