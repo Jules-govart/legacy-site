@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>LEGACY – BDE Montpellier Business School</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LEGACY, le Bureau des Élèves de Montpellier Business School : soirées, navettes gratuites, avantages étudiants et une équipe joignable toute l'année.">
+  <meta name="theme-color" content="#08070a">
+
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LEGACY – BDE MBS">
+  <meta property="og:title" content="LEGACY – BDE de Montpellier Business School">
+  <meta property="og:description" content="Soirées, navettes gratuites, avantages étudiants et vie de campus.">
+  <meta property="og:image" content="https://www.bdelegacy.fr/v2/assets/og.jpg">
+  <meta property="og:url" content="https://www.bdelegacy.fr/v2/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Écran d'ouverture -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-ring"></div>
+  <img src="assets/logo.png" alt="" class="loader-logo">
+  <div class="loader-word">LEGACY</div>
+</div>
+
+<!-- Fond animé -->
+<div class="aurora" aria-hidden="true">
+  <span class="aurora-blob b1"></span>
+  <span class="aurora-blob b2"></span>
+  <span class="aurora-blob b3"></span>
+</div>
+<canvas id="embers" class="embers" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Curseur -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- Barre de progression de lecture -->
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="top">
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="LEGACY – Accueil">
+      <img src="assets/logo.png" alt="" class="brand-logo">
+      <span class="brand-word">LEGACY</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#agenda" data-nav>Agenda</a>
+      <a href="#soirees" data-nav>Soirées</a>
+      <a href="#avantages" data-nav>Avantages</a>
+      <a href="#equipe" data-nav>Le BDE</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <a class="live-pill" href="#agenda" data-countdown="2026-09-17T20:00:00+02:00" data-label="Voile Bleue">
+        <span class="live-dot"></span>
+        <span class="live-text">Voile Bleue · bientôt</span>
+      </a>
+      <a class="nav-icon" href="https://www.instagram.com/legacy_mbs_bde" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.5 6.5a.9.9 0 1 1-.9.9.9.9 0 0 1 .9-.9z"/></svg>
+      </a>
+      <a class="nav-icon" href="https://www.tiktok.com/@liste_legacy_mbs6" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.6 2.6 2.3 4.2 4.5 4.5v3.1c-1.7.1-3.3-.4-4.5-1.3V16a6 6 0 1 1-6-6c.4 0 .8 0 1.2.1v3.3a2.6 2.6 0 1 0 1.8 2.5V3h3z"/></svg>
+      </a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Navigation mobile">
+    <a href="#agenda">Agenda</a>
+    <a href="#soirees">Soirées</a>
+    <a href="#avantages">Avantages</a>
+    <a href="#equipe">Le BDE</a>
+    <a href="#contact">Contact</a>
+    <div class="mobile-menu-social">
+      <a href="https://www.instagram.com/legacy_mbs_bde" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@liste_legacy_mbs6" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:bde.legacy.mbs7@gmail.com">Email</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+
+    <div class="hero-copy">
+      <div class="hero-kicker reveal">
+        <span class="kicker-line"></span>
+        <span>Bureau des Élèves · Montpellier Business School</span>
+      </div>
+
+      <h1 class="hero-title" aria-label="LEGACY">
+        <span class="split" data-split>LEGACY</span>
+      </h1>
+
+      <p class="hero-rotator reveal" aria-live="polite">
+        <span class="rotator-static">Le BDE qui</span>
+        <span class="rotator" data-words="organise vos soirées|négocie vos avantages|vous ramène en navette|rend des comptes|fait vivre le campus">
+          <span class="rotator-word">organise vos soirées</span>
+        </span>
+      </p>
+
+      <p class="hero-lead reveal">
+        Un héritage, une vision. Des soirées préparées sérieusement, des partenariats qui
+        servent vraiment au quotidien, et une équipe joignable toute l'année.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a class="btn btn-gold magnetic" href="#agenda">
+          <span>Voir l'agenda</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-line magnetic" href="#avantages">
+          <span>Vos avantages</span>
+        </a>
+      </div>
+
+      <div class="hero-countdown reveal" data-countdown-target="2026-09-17T20:00:00+02:00">
+        <div class="cd-head">Prochaine soirée · <strong>La Voile Bleue</strong> · jeudi 17 sept.</div>
+        <div class="cd-grid">
+          <div class="cd-unit"><span class="cd-num" data-d>00</span><span class="cd-lab">jours</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span class="cd-num" data-h>00</span><span class="cd-lab">heures</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span class="cd-num" data-m>00</span><span class="cd-lab">min</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span class="cd-num" data-s>00</span><span class="cd-lab">sec</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orbit orbit-1"></div>
+      <div class="orbit orbit-2"></div>
+      <div class="orbit orbit-3">
+        <span class="orbit-sat"></span>
+      </div>
+      <div class="halo"></div>
+      <img src="assets/logo.png" alt="" class="hero-logo" data-parallax="18">
+
+      <span class="chip chip-1" data-parallax="-30">🎉 Soirées toute l'année</span>
+      <span class="chip chip-2" data-parallax="26">🚌 Navettes gratuites</span>
+      <span class="chip chip-3" data-parallax="-22">💸 -30 % impressions</span>
+      <span class="chip chip-4" data-parallax="34">🏋️ -10 €/mois KeepCool</span>
+    </div>
+
+  </div>
+
+  <a class="scroll-cue" href="#agenda" aria-label="Défiler">
+    <span class="mouse"><span></span></span>
+    <span class="scroll-cue-text">Scroll</span>
+  </a>
+</section>
+
+<!-- ===================== BANDEAU DÉFILANT ===================== -->
+<div class="band-wrap"><div class="band band-gold" aria-hidden="true">
+  <div class="band-track" data-speed="60">
+    <span>LEGACY</span><i>✦</i><span>BDE MBS</span><i>✦</i><span>Soirées</span><i>✦</i><span>Navettes gratuites</span><i>✦</i><span>Avantages étudiants</span><i>✦</i><span>WEI 2026</span><i>✦</i><span>Voile Bleue · 17 sept.</span><i>✦</i>
+  </div>
+</div></div>
+
+<!-- ===================== CHIFFRES ===================== -->
+<section class="stats container">
+  <div class="stat reveal">
+    <div class="stat-num"><span data-count="25" data-suffix="+">0</span></div>
+    <div class="stat-lab">Partenaires négociés</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num"><span data-count="7">0</span></div>
+    <div class="stat-lab">Soirées la saison dernière</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num"><span data-count="0" data-prefix="">0</span> €</div>
+    <div class="stat-lab">Le prix des navettes retour</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num"><span data-count="365">0</span></div>
+    <div class="stat-lab">Jours par an joignables</div>
+  </div>
+</section>
+
+<!-- ===================== AGENDA ===================== -->
+<section class="section container" id="agenda">
+  <div class="section-head">
+    <span class="flag reveal">Agenda</span>
+    <h2 class="section-title reveal"><span data-split>À venir</span></h2>
+    <p class="section-sub reveal">Les prochaines dates à bloquer. Billetterie et infos annoncées ici et sur Instagram.</p>
+  </div>
+
+  <div class="agenda-grid">
+    <article class="card tilt glow reveal agenda-hot">
+      <span class="card-tag">Cette semaine</span>
+      <div class="agenda-date"><span class="d-num">17</span><span class="d-mon">sept.</span></div>
+      <h3>Soirée à la Voile Bleue</h3>
+      <p>On enchaîne jeudi, les pieds dans le sable. Affiche, line-up, tarifs et billetterie arrivent dans les prochains jours.</p>
+      <ul class="meta">
+        <li><b>Lieu</b> La Voile Bleue</li>
+        <li><b>Horaires</b> À venir</li>
+        <li><b>Billetterie</b> À venir</li>
+      </ul>
+      <a class="card-link" href="https://www.instagram.com/legacy_mbs_bde" target="_blank" rel="noopener">Suivre l'annonce sur Instagram <span>›</span></a>
+    </article>
+
+    <article class="card tilt glow reveal">
+      <span class="card-tag">Octobre</span>
+      <div class="agenda-date"><span class="d-num">2–4</span><span class="d-mon">oct.</span></div>
+      <h3>WEI 2026</h3>
+      <p>Trois jours, une destination gardée secrète. Révélation prochainement sur Instagram.</p>
+      <ul class="meta">
+        <li><b>Format</b> Week-end d'intégration</li>
+        <li><b>Destination</b> Dévoilée bientôt</li>
+      </ul>
+      <a class="card-link" href="https://www.instagram.com/legacy_mbs_bde" target="_blank" rel="noopener">Ne rien rater <span>›</span></a>
+    </article>
+
+    <article class="card tilt glow reveal">
+      <span class="card-tag">Toute l'année</span>
+      <div class="agenda-date"><span class="d-num">∞</span><span class="d-mon">avantages</span></div>
+      <h3>Vos réductions</h3>
+      <p>Impressions, sport, restauration, permis, festivals… Vos partenaires vous font économiser toute l'année.</p>
+      <ul class="meta">
+        <li><b>Partenaires</b> 25 et plus</li>
+        <li><b>Accès</b> Sur présentation de votre carte</li>
+      </ul>
+      <a class="card-link" href="#avantages">Voir les avantages <span>›</span></a>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== SOIRÉES (FILM STRIP) ===================== -->
+<section class="section strip-section" id="soirees">
+  <div class="container section-head">
+    <span class="flag reveal">Archives</span>
+    <h2 class="section-title reveal"><span data-split>Nos soirées</span></h2>
+    <p class="section-sub reveal">Un aperçu de la saison passée. Survolez pour mettre en pause, cliquez pour agrandir.</p>
+  </div>
+
+  <div class="strip" data-strip>
+    <div class="strip-track">
+      <a class="poster tilt" href="assets/a-inte.jpg" data-title="Soirée d'inté" data-sub="BAMM × MBS"><img src="assets/a-inte.jpg" alt="Affiche Soirée d'inté" loading="lazy"><span class="poster-cap"><b>Soirée d'inté</b><i>BAMM × MBS</i></span></a>
+      <a class="poster tilt" href="assets/a-back-to-school.jpg" data-title="Back to School" data-sub="Rentrée"><img src="assets/a-back-to-school.jpg" alt="Affiche Back to School" loading="lazy"><span class="poster-cap"><b>Back to School</b><i>Rentrée</i></span></a>
+      <a class="poster tilt" href="assets/a-pink-party.jpg" data-title="Pink Party" data-sub="Dress code rose"><img src="assets/a-pink-party.jpg" alt="Affiche Pink Party" loading="lazy"><span class="poster-cap"><b>Pink Party</b><i>Dress code rose</i></span></a>
+      <a class="poster tilt" href="assets/a-carnaval.jpg" data-title="Carnaval de Rio" data-sub="Plumes et paillettes"><img src="assets/a-carnaval.jpg" alt="Affiche Carnaval de Rio" loading="lazy"><span class="poster-cap"><b>Carnaval de Rio</b><i>Plumes et paillettes</i></span></a>
+      <a class="poster tilt" href="assets/a-agafay.jpg" data-title="Soirée Agafay" data-sub="Désert vibes"><img src="assets/a-agafay.jpg" alt="Affiche Soirée Agafay" loading="lazy"><span class="poster-cap"><b>Soirée Agafay</b><i>Désert vibes</i></span></a>
+      <a class="poster tilt" href="assets/a-semineige.jpg" data-title="After Semineige" data-sub="Retour des pistes"><img src="assets/a-semineige.jpg" alt="Affiche After Semineige" loading="lazy"><span class="poster-cap"><b>After Semineige</b><i>Retour des pistes</i></span></a>
+      <a class="poster tilt" href="assets/a-campagne.jpg" data-title="Soirée de Campagne" data-sub="Mas du Courant"><img src="assets/a-campagne.jpg" alt="Affiche Soirée de Campagne" loading="lazy"><span class="poster-cap"><b>Soirée de Campagne</b><i>Mas du Courant</i></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MANIFESTE ===================== -->
+<section class="manifesto" id="equipe">
+  <img src="assets/logo.png" alt="" class="manifesto-logo" data-parallax-scroll="0.18" aria-hidden="true">
+  <div class="container manifesto-inner">
+    <span class="flag flag-dark reveal">Le BDE</span>
+    <h2 class="manifesto-title reveal"><span data-split>Un héritage,</span><br><span data-split>une vision.</span></h2>
+    <p class="manifesto-text reveal">
+      Un BDE qui organise, qui négocie et qui rend des comptes. Chaque soirée est préparée
+      sérieusement, chaque partenariat doit servir au quotidien, et l'équipe reste joignable
+      toute l'année.
+    </p>
+
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="pillar-ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6L22 9.3l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.9L2 9.3l7.1-.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Organiser</h3>
+        <p>Des soirées préparées en amont : lieux, sécurité, navettes, billetterie claire.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Négocier</h3>
+        <p>Des partenariats qui font baisser la facture sur les sorties comme sur le quotidien.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H8l-4 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Rendre des comptes</h3>
+        <p>Une équipe joignable, transparente, qui répond sur Instagram, TikTok et par mail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVANTAGES ===================== -->
+<section class="section" id="avantages">
+  <div class="container section-head">
+    <span class="flag reveal">Avantages</span>
+    <h2 class="section-title reveal"><span data-split>Vos partenaires</span></h2>
+    <p class="section-sub reveal">Nos partenariats vous font économiser toute l'année, sur les sorties comme sur le quotidien.</p>
+  </div>
+
+  <div class="logos-wall" aria-hidden="true">
+    <div class="logos-row" data-dir="1">
+      <img src="assets/p-shotgun.png" alt=""><img src="assets/p-casita.png" alt=""><img src="assets/p-3singes.png" alt=""><img src="assets/p-richter.png" alt=""><img src="assets/p-azmusic.png" alt=""><img src="assets/p-copyshop.png" alt=""><img src="assets/p-avenir-sante.png" alt=""><img src="assets/p-ef.png" alt=""><img src="assets/p-axa.png" alt=""><img src="assets/p-keepcool.png" alt=""><img src="assets/p-chez-vincent.png" alt=""><img src="assets/p-burgers-de-papa.png" alt="">
+    </div>
+    <div class="logos-row" data-dir="-1">
+      <img src="assets/p-lapunky.png" alt=""><img src="assets/p-adelbeauty.png" alt=""><img src="assets/p-delta.png" alt=""><img src="assets/p-familypiknik.png" alt=""><img src="assets/p-hurricanes.png" alt=""><img src="assets/p-insane.png" alt=""><img src="assets/p-jow.png" alt=""><img src="assets/p-deferlantes.png" alt=""><img src="assets/p-myprotein.png" alt=""><img src="assets/p-nordvpn.png" alt=""><img src="assets/p-orange.png" alt=""><img src="assets/p-revolut.png" alt=""><img src="assets/p-gaumont.png" alt=""><img src="assets/p-rose.png" alt="">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="perks-filter reveal" role="tablist" aria-label="Filtrer les avantages">
+      <button class="chip-btn is-active" data-filter="all" role="tab" aria-selected="true">Tout</button>
+      <button class="chip-btn" data-filter="sortir" role="tab" aria-selected="false">Sortir</button>
+      <button class="chip-btn" data-filter="manger" role="tab" aria-selected="false">Manger</button>
+      <button class="chip-btn" data-filter="quotidien" role="tab" aria-selected="false">Quotidien</button>
+      <button class="chip-btn" data-filter="festival" role="tab" aria-selected="false">Festivals</button>
+    </div>
+
+    <div class="perks-grid" data-perks>
+      <article class="perk tilt reveal" data-cat="quotidien"><img src="assets/p-copyshop.png" alt="CopyShop Saint-Aunès"><div class="perk-body"><h3>CopyShop Saint-Aunès</h3><span class="deal">-30 % sur toutes commandes</span></div></article>
+      <article class="perk tilt reveal" data-cat="quotidien"><img src="assets/p-keepcool.png" alt="KeepCool"><div class="perk-body"><h3>KeepCool</h3><span class="deal">-10 €/mois, 0 frais d'inscription</span></div></article>
+      <article class="perk tilt reveal" data-cat="manger"><img src="assets/p-chez-vincent.png" alt="Chez Vincent"><div class="perk-body"><h3>Chez Vincent</h3><span class="deal">-15 % restauration</span></div></article>
+      <article class="perk tilt reveal" data-cat="manger"><img src="assets/p-burgers-de-papa.png" alt="Les Burgers de Papa"><div class="perk-body"><h3>Les Burgers de Papa</h3><span class="deal">Le menu au prix du burger</span></div></article>
+      <article class="perk tilt reveal" data-cat="quotidien"><img src="assets/p-richter.png" alt="Auto-école Richter"><div class="perk-body"><h3>Auto-école Richter</h3><span class="deal">Remises permis auto, moto, bateau</span></div></article>
+      <article class="perk tilt reveal" data-cat="quotidien"><img src="assets/p-azmusic.png" alt="AZ Music Montpellier"><div class="perk-body"><h3>AZ Music</h3><span class="deal">-10 % location de matériel</span></div></article>
+      <article class="perk tilt reveal" data-cat="sortir"><img src="assets/p-casita.png" alt="Casita Club"><div class="perk-body"><h3>Casita Club</h3><span class="deal">Entrée facilitée, tarifs préférentiels</span></div></article>
+      <article class="perk tilt reveal" data-cat="sortir"><img src="assets/p-3singes.png" alt="Le Bar des 3 Singes"><div class="perk-body"><h3>Le Bar des 3 Singes</h3><span class="deal">Prix préférentiels étudiants</span></div></article>
+      <article class="perk tilt reveal" data-cat="sortir"><img src="assets/p-shotgun.png" alt="Shotgun"><div class="perk-body"><h3>Shotgun</h3><span class="deal">Accès facilité aux événements</span></div></article>
+      <article class="perk tilt reveal" data-cat="quotidien"><img src="assets/p-axa.png" alt="AXA Saint-Jean-de-Védas"><div class="perk-body"><h3>AXA</h3><span class="deal">Jusqu'à 200 € à l'ouverture d'un compte</span></div></article>
+      <article class="perk tilt reveal" data-cat="quotidien"><img src="assets/p-adelbeauty.png" alt="Adel Beauty"><div class="perk-body"><h3>Adel Beauty</h3><span class="deal">-10 € sur tous les services</span></div></article>
+      <article class="perk tilt reveal" data-cat="sortir"><img src="assets/p-hurricanes.png" alt="Hurricanes Montpellier"><div class="perk-body"><h3>Hurricanes Montpellier</h3><span class="deal">Prix réduits pour les matchs</span></div></article>
+      <article class="perk tilt reveal" data-cat="festival"><img src="assets/p-lapunky.png" alt="La Punky"><div class="perk-body"><h3>La Punky</h3><span class="deal">Prix promo sur chaque événement</span></div></article>
+      <article class="perk tilt reveal" data-cat="festival"><img src="assets/p-insane.png" alt="Insane Festival"><div class="perk-body"><h3>Insane Festival</h3><span class="deal">Prix promo sur les événements</span></div></article>
+      <article class="perk tilt reveal" data-cat="festival"><img src="assets/p-deferlantes.png" alt="Les Déferlantes"><div class="perk-body"><h3>Les Déferlantes</h3><span class="deal">Prix promo sur les événements</span></div></article>
+      <article class="perk tilt reveal" data-cat="festival"><img src="assets/p-delta.png" alt="Delta Festival"><div class="perk-body"><h3>Delta Festival</h3><span class="deal">Le rendez-vous étudiant à Marseille</span></div></article>
+      <article class="perk tilt reveal" data-cat="festival"><img src="assets/p-familypiknik.png" alt="Family Piknik"><div class="perk-body"><h3>Family Piknik</h3><span class="deal">Festival électro premium</span></div></article>
+      <article class="perk tilt reveal" data-cat="quotidien"><img src="assets/p-ef.png" alt="EF Education First"><div class="perk-body"><h3>EF Education First</h3><span class="deal">Tests d'anglais et séjours</span></div></article>
+    </div>
+    <p class="perks-empty" data-perks-empty hidden>Aucun avantage dans cette catégorie pour le moment.</p>
+  </div>
+</section>
+
+<!-- ===================== BANDEAU INVERSE ===================== -->
+<div class="band-wrap"><div class="band band-dark" aria-hidden="true">
+  <div class="band-track" data-speed="-45">
+    <span>Instagram @legacy_mbs_bde</span><i>✦</i><span>TikTok @liste_legacy_mbs6</span><i>✦</i><span>bde.legacy.mbs7@gmail.com</span><i>✦</i><span>Montpellier Business School</span><i>✦</i>
+  </div>
+</div></div>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section container" id="contact">
+  <div class="contact-grid">
+    <div class="contact-copy">
+      <span class="flag reveal">Contact</span>
+      <h2 class="section-title reveal"><span data-split>On vous répond</span></h2>
+      <p class="section-sub reveal">Une question, une idée, un partenariat ? Écrivez-nous directement. L'équipe répond dans les plus brefs délais.</p>
+
+      <ul class="contact-list reveal">
+        <li><span>École</span><b>Montpellier Business School</b></li>
+        <li><span>Mail</span><a href="mailto:bde.legacy.mbs7@gmail.com">bde.legacy.mbs7@gmail.com</a></li>
+        <li><span>Instagram</span><a href="https://www.instagram.com/legacy_mbs_bde" target="_blank" rel="noopener">@legacy_mbs_bde</a></li>
+        <li><span>TikTok</span><a href="https://www.tiktok.com/@liste_legacy_mbs6" target="_blank" rel="noopener">@liste_legacy_mbs6</a></li>
+      </ul>
+    </div>
+
+    <form class="contact-form glow reveal" action="https://formspree.io/f/mvzplayq" method="POST" data-form>
+      <div class="field">
+        <input type="text" name="name" id="f-name" placeholder=" " required autocomplete="name">
+        <label for="f-name">Nom / Prénom</label>
+      </div>
+      <div class="field">
+        <input type="email" name="email" id="f-email" placeholder=" " required autocomplete="email">
+        <label for="f-email">Adresse e-mail</label>
+      </div>
+      <div class="field">
+        <textarea name="message" id="f-msg" rows="5" placeholder=" " required></textarea>
+        <label for="f-msg">Votre message</label>
+      </div>
+      <button type="submit" class="btn btn-gold magnetic btn-wide">
+        <span>Envoyer le message</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form-status" data-form-status aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-line" aria-hidden="true"></div>
+  <div class="container footer-inner">
+    <a class="footer-brand" href="#top">
+      <img src="assets/logo.png" alt="" class="footer-logo">
+      <span>LEGACY</span>
+    </a>
+
+    <nav class="footer-links" aria-label="Pied de page">
+      <a href="#agenda">Agenda</a>
+      <a href="#soirees">Soirées</a>
+      <a href="#avantages">Avantages</a>
+      <a href="#equipe">Le BDE</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://www.instagram.com/legacy_mbs_bde" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.5 6.5a.9.9 0 1 1-.9.9.9.9 0 0 1 .9-.9z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@liste_legacy_mbs6" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.6 2.6 2.3 4.2 4.5 4.5v3.1c-1.7.1-3.3-.4-4.5-1.3V16a6 6 0 1 1-6-6c.4 0 .8 0 1.2.1v3.3a2.6 2.6 0 1 0 1.8 2.5V3h3z"/></svg>
+      </a>
+      <a href="mailto:bde.legacy.mbs7@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2 8 5 8-5H4zm16 12V10l-8 5-8-5v10h16z"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-copy">© <span data-year>2026</span> LEGACY – BDE MBS · Association loi 1901</div>
+  </div>
+</footer>
+
+<!-- Retour en haut -->
+<button class="to-top" id="toTop" aria-label="Retour en haut">
+  <svg viewBox="0 0 36 36" aria-hidden="true">
+    <circle class="to-top-track" cx="18" cy="18" r="16"/>
+    <circle class="to-top-bar" cx="18" cy="18" r="16"/>
+  </svg>
+  <span>↑</span>
+</button>
+
+<!-- Visionneuse d'affiches -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Affiche">
+  <button class="lightbox-close" aria-label="Fermer">×</button>
+  <figure>
+    <img src="" alt="">
+    <figcaption><b></b><i></i></figcaption>
+  </figure>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
