@@ -2201,3 +2201,15 @@ header.header-compact .brand-logo {
   .cd-live { animation: none; }
   * { scroll-behavior: auto !important; }
 }
+/* =========================================================
+   AJOUT — grille agenda adaptative (accueil)
+   À coller à la fin de styles.css
+   ========================================================= */
+
+/* La grille s'adapte au nombre de cartes : plus besoin
+   d'avoir exactement 3 événements à afficher. */
+@media (min-width: 800px) {
+  .rentree-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
