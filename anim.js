@@ -90,9 +90,17 @@
     var flag = document.querySelector('.next-event-flag');
     if (!flag) return;
 
-    // Date cible : jeudi 10 septembre 2026, 20h00 (heure de Paris)
-    var cible = new Date('2026-09-10T20:00:00+02:00').getTime();
+    // La date cible se règle dans le HTML :
+    // <span class="next-event-flag" data-countdown="2026-09-17T20:00:00+02:00">
+    // Sans cet attribut, aucun compte à rebours n'est affiché.
+    var attr = flag.getAttribute('data-countdown');
+    if (!attr) return;
+
+    var cible = new Date(attr).getTime();
     if (isNaN(cible)) return;
+
+    // Passé l'événement, on n'affiche plus rien du tout
+    if (Date.now() - cible > 6 * 3600 * 1000) return;
 
     var box = document.createElement('div');
     box.className = 'countdown';
