@@ -75,7 +75,7 @@
     var ctx = canvas.getContext('2d');
     var W, H, dpr, particles = [];
     var mouse = { x: -9999, y: -9999, active: false };
-    var COUNT = isMobile ? 45 : 110;
+    var COUNT = isMobile ? 22 : 55;
 
     function resize() {
       dpr = Math.min(2, window.devicePixelRatio || 1);
@@ -88,12 +88,12 @@
     function spawn(p, fromBottom) {
       p.x = Math.random() * W;
       p.y = fromBottom ? H + 20 * dpr : Math.random() * H;
-      p.r = (0.6 + Math.random() * 1.9) * dpr;
-      p.vy = -(6 + Math.random() * 22) * dpr;
+      p.r = (0.5 + Math.random() * 1.2) * dpr;
+      p.vy = -(4 + Math.random() * 12) * dpr;
       p.vx = (Math.random() - 0.5) * 8 * dpr;
       p.life = 0;
       p.max = 8 + Math.random() * 12;
-      p.hue = Math.random() < 0.8 ? 43 : 350;
+      p.hue = 42;
       p.wob = Math.random() * Math.PI * 2;
       p.wobSpeed = 0.6 + Math.random() * 1.4;
       return p;
@@ -135,9 +135,9 @@
         if (p.life > p.max || p.y < -20 * dpr) { spawn(p, true); continue; }
 
         var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
-        g.addColorStop(0, 'hsla(' + p.hue + ', 85%, 72%, ' + (0.9 * a) + ')');
-        g.addColorStop(0.4, 'hsla(' + p.hue + ', 85%, 60%, ' + (0.35 * a) + ')');
-        g.addColorStop(1, 'hsla(' + p.hue + ', 85%, 55%, 0)');
+        g.addColorStop(0, 'hsla(' + p.hue + ', 55%, 75%, ' + (0.55 * a) + ')');
+        g.addColorStop(0.4, 'hsla(' + p.hue + ', 55%, 65%, ' + (0.18 * a) + ')');
+        g.addColorStop(1, 'hsla(' + p.hue + ', 55%, 60%, 0)');
         ctx.fillStyle = g;
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2); ctx.fill();
       }
@@ -333,7 +333,6 @@
     function setNum(el, v) {
       if (!el || el.textContent === v) return;
       el.textContent = v;
-      if (!reduced) { el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); }
     }
 
     function tick() {
@@ -490,32 +489,7 @@
   /* ---------------------------------------------------------
      13. Boutons magnétiques + onde au clic
      --------------------------------------------------------- */
-  function initButtons() {
-    $$('.btn').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        if (reduced) return;
-        var r = btn.getBoundingClientRect();
-        var s = doc.createElement('span');
-        s.className = 'ripple';
-        var size = Math.max(r.width, r.height);
-        s.style.width = s.style.height = size + 'px';
-        s.style.left = (e.clientX - r.left - size / 2) + 'px';
-        s.style.top = (e.clientY - r.top - size / 2) + 'px';
-        btn.appendChild(s);
-        setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 650);
-      });
-    });
-    if (!finePointer || reduced) return;
-    $$('.magnetic').forEach(function (el) {
-      var strength = 0.35;
-      el.addEventListener('pointermove', function (e) {
-        var r = el.getBoundingClientRect();
-        var dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
-        el.style.transform = 'translate(' + (dx * strength).toFixed(1) + 'px,' + (dy * strength).toFixed(1) + 'px)';
-      });
-      el.addEventListener('pointerleave', function () { el.style.transform = ''; });
-    });
-  }
+  function initButtons() { /* boutons sobres : aucune animation scriptée */ }
 
   /* ---------------------------------------------------------
      14. Parallaxe : souris (hero) et défilement (manifeste)

@@ -15,7 +15,7 @@ Une fois la branche fusionnée dans `main`, la page est servie à
 | --- | --- |
 | `index.html` | La page (une seule page, sections ancrées) |
 | `style.css` | Style, animations CSS, responsive |
-| `app.js` | Braises, curseur, compteurs, bandeaux, tilt, filtre, formulaire, visionneuse |
+| `app.js` | Braises, compteurs, bandeaux, compte à rebours, filtre, formulaire, visionneuse |
 | `assets/` | Images redimensionnées (3,4 Mo au total) |
 
 ## Ce qu'il faut mettre à jour régulièrement
@@ -51,6 +51,6 @@ réseau le visiteur voit l'adresse mail.
 ## Notes techniques
 
 - Polices Google Fonts (Cinzel, Inter) avec repli sur Georgia et la police système.
-- `prefers-reduced-motion` respecté : braises, curseur, bandeaux et tilt désactivés.
+- `prefers-reduced-motion` respecté : braises, bandeaux et animations désactivés.
 - Une seule boucle `requestAnimationFrame` pilote tout, mise en pause quand l'onglet est caché.
 - Aucune dépendance, aucun build : ouvrir `index.html` suffit.
